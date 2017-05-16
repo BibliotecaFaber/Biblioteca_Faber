@@ -16,7 +16,7 @@ namespace BibliotecaFaber {
             Application.Run(new Form1());
 
 
-            //esta wea es porque puedo
+               //esta wea es porque puedo
         }
     }
 }
