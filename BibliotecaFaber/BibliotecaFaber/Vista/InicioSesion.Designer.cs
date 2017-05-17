@@ -72,8 +72,9 @@
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar Sesion";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // Inicio_Sesion
+            // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,8 +84,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsuario);
-            this.Name = "Inicio_Sesion";
+            this.Name = "InicioSesion";
             this.Text = "Iniciar Sesion";
+            this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

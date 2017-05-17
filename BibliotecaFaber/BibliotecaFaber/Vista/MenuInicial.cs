@@ -13,5 +13,9 @@ namespace BibliotecaFaber.Vista {
         public MenuInicial() {
             InitializeComponent();
         }
+
+        private void MenuInicial_Load(object sender, EventArgs e) {
+
+        }
     }
 }
