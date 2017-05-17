@@ -1,5 +1,5 @@
 ﻿namespace BibliotecaFaber.Vista {
-    partial class Inicio_Sesion {
+    partial class InicioSesion {
         /// <summary>
         /// Required designer variable.
         /// </summary>

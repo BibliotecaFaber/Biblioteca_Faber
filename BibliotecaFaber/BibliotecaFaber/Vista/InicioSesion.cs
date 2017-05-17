@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotecaFaber.Vista {
-    public partial class Inicio_Sesion : Form {
-        public Inicio_Sesion() {
+    public partial class InicioSesion : Form {
+        public InicioSesion() {
             InitializeComponent();
         }
 
