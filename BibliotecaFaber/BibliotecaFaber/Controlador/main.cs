@@ -1,4 +1,4 @@
-﻿using BibliotecaFaber.Vista;
+using BibliotecaFaber.Vista;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +15,10 @@ namespace BibliotecaFaber {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new InicioSesion());
+            Application.Run(new Form1());
+
+
+               //esta wea es porque puedo
         }
     }
 }

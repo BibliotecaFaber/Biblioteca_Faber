@@ -63,8 +63,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\Almacenamiento.cs" />
+    <Compile Include="Modelo\Persona.cs" />
+    <Compile Include="Modelo\Libro.cs" />
     <Compile Include="Controlador\Controlador.cs" />
-    <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Vista\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +120,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
+  
   <ItemGroup>
     <None Include="Resources\Book-Add-32.png" />
   </ItemGroup>
@@ -132,6 +132,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Window-App-List-Close-32.png" />
+  </ItemGroup>
+  <ItemGroup />
+<ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets')" />
