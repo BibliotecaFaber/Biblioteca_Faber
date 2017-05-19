@@ -66,6 +66,7 @@
     <Compile Include="Modelo\Almacenamiento.cs" />
     <Compile Include="Modelo\Persona.cs" />
     <Compile Include="Modelo\Libro.cs" />
+    <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Controlador\Controlador.cs" />
     <Compile Include="Vista\Form1.cs">
       <SubType>Form</SubType>
