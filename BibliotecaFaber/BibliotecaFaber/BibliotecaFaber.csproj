@@ -71,7 +71,7 @@
     <Compile Include="Vista\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controlador\Program.cs" />
+    <Compile Include="Controlador\main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\InicioSesion.cs">
       <SubType>Form</SubType>
