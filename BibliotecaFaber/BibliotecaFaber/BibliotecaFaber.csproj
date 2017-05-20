@@ -66,7 +66,9 @@
     <Compile Include="Modelo\Almacenamiento.cs" />
     <Compile Include="Modelo\Persona.cs" />
     <Compile Include="Modelo\Libro.cs" />
+    <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Controlador\Controlador.cs" />
+    <Compile Include="Modelo\Prestamo.cs" />
     <Compile Include="Vista\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +122,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  
   <ItemGroup>
     <None Include="Resources\Book-Add-32.png" />
   </ItemGroup>
@@ -134,7 +135,7 @@
     <None Include="Resources\Window-App-List-Close-32.png" />
   </ItemGroup>
   <ItemGroup />
-<ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

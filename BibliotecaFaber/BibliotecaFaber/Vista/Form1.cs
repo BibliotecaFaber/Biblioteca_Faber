@@ -14,16 +14,16 @@ namespace BibliotecaFaber {
         public Form1() {
             InitializeComponent();
         }
-        Conexion xx = new Conexion();
+        //Conexion xx = new Conexion();
         private void Form1_Load(object sender, EventArgs e) {
             //MessageBox.Show("Holi");
             
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            DataTable x = xx.selectQuery("SELECT * FROM Libros");
+            //DataTable x = xx.selectQuery("SELECT * FROM Libros");
             //MessageBox.Show(x.Rows[0].ItemArray[1].ToString());
-            dataGridView1.DataSource = x;
+         //   dataGridView1.DataSource = x;
         }
     }
 }
