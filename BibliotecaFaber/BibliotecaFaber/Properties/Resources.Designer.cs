@@ -103,6 +103,16 @@ namespace BibliotecaFaber.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pencil_32 {
+            get {
+                object obj = ResourceManager.GetObject("Pencil-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap User_32 {
             get {
                 object obj = ResourceManager.GetObject("User-32", resourceCulture);
@@ -116,6 +126,16 @@ namespace BibliotecaFaber.Properties {
         internal static System.Drawing.Bitmap User_Add_32 {
             get {
                 object obj = ResourceManager.GetObject("User-Add-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Close_32 {
+            get {
+                object obj = ResourceManager.GetObject("User-Close-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

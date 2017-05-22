@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Controlador {
     class Controlador {
+        //MODELO
         public Libro libro = new Libro(0,"",""); //Ver Constructor vacio
         public Persona persona = new Persona();
         public Almacenamiento almacenamiento = new Almacenamiento();
         public Prestamo prestamo = new Prestamo();
         public Conexion conexion = new Conexion();
+        //public Estante estante = new Estante();
 
-        //VISTAS
+        //VISTA
         public InicioSesion inicio = new InicioSesion();
         public MenuInicial menu = new MenuInicial();
         public GestionLibros gestionLibros = new GestionLibros();
@@ -38,15 +40,15 @@ namespace BibliotecaFaber.Controlador {
             if (t.Rows.Count>0) {
                 
                 if (p.Equals(t.Rows[0].ItemArray[0].ToString())) {
-                    MessageBox.Show("Inicio de Sesion Correcto");
+                    MessageBox.Show("Inicio de Sesion Correcto"); //Aqui o en la vista??
                     iniciarVista(menu);
                     inicio.Hide();
                 } else {
-                    MessageBox.Show("Contraseña Incorrecta");
+                    MessageBox.Show("Contraseña Incorrecta"); //Lo mismo
                 }
 
             } else {
-                MessageBox.Show("No Existe el Usuario");
+                MessageBox.Show("No Existe el Usuario"); //...
             }
         }
 
@@ -54,5 +56,9 @@ namespace BibliotecaFaber.Controlador {
             vista.Show();
             //buscarLibros.Show();
         }
+
+
+
+
     }
 }
