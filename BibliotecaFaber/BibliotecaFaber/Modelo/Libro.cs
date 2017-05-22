@@ -49,7 +49,7 @@ namespace BibliotecaFaber.Modelo {
         }
         public string Autor { get => autor; set => autor = value; }
 
-        public DataTable listarLibros() {
+        /*public DataTable listarLibros() {
             return con.getQuery("SELECT * FROM Libros;");
         }
 
@@ -73,7 +73,7 @@ namespace BibliotecaFaber.Modelo {
                     break;
             }
 
-        }
+        }*/
 
 
 

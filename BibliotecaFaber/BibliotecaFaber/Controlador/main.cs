@@ -14,7 +14,9 @@ namespace BibliotecaFaber {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicioSesion());
+            Controlador.Controlador inicial = new Controlador.Controlador();
+            inicial.inicioPrograma();
+            //Application.Run(new Controlador());
             //Application.Run(new Form1());
 
 
