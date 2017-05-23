@@ -31,13 +31,13 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.icoBuscar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GestionLibros = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GestionLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,15 +117,16 @@
             this.icoBuscar.TabStop = false;
             this.icoBuscar.Click += new System.EventHandler(this.icoBuscar_Click);
             // 
-            // pictureBox1
+            // GestionLibros
             // 
-            this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_32;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.GestionLibros.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_32;
+            this.GestionLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.GestionLibros.Location = new System.Drawing.Point(59, 25);
+            this.GestionLibros.Name = "GestionLibros";
+            this.GestionLibros.Size = new System.Drawing.Size(50, 50);
+            this.GestionLibros.TabIndex = 1;
+            this.GestionLibros.TabStop = false;
+            this.GestionLibros.Click += new System.EventHandler(this.gestionLibros_Click);
             // 
             // label5
             // 
@@ -150,22 +151,26 @@
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.icoBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.GestionLibros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MenuInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuInicial";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuInicial_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuInicial_FormClosed);
             this.Load += new System.EventHandler(this.MenuInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GestionLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox GestionLibros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox icoBuscar;
         private System.Windows.Forms.Label lblBuscar;

@@ -18,12 +18,43 @@ namespace BibliotecaFaber.Vista {
             this.con = (Controlador.Controlador)cc;
         }
 
+        private void MenuInicial_FormClosing(object sender, FormClosingEventArgs e) {
+
+        }
+
+        private void MenuInicial_FormClosed(object sender, FormClosedEventArgs e) {
+            //con.menu.Close ();
+            //con.MenuCerrar (con.menu);
+            Application.Exit ();
+        }
+
+        private void gestionLibros_Click(object sender, EventArgs e) {
+           
+            con.menuToGestionLibros (this);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* MOTHER FUCKING USELESS */
         private void MenuInicial_Load(object sender, EventArgs e) {
 
         }
 
         private void icoBuscar_Click(object sender, EventArgs e) {
-            con.iniciarVista(con.buscarLibros);
+            con.iniciarVista (con.buscarLibros);
         }
     }
 }

@@ -28,6 +28,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -66,25 +67,38 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(87, 113);
+            this.btnIniciar.Location = new System.Drawing.Point(26, 117);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(129, 27);
+            this.btnIniciar.Size = new System.Drawing.Size(96, 27);
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar Sesion";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(164, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 29);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Buscar Libro";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 165);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "InicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.ResumeLayout(false);
@@ -99,5 +113,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.Button button1;
     }
 }

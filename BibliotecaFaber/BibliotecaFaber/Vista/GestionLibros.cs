@@ -13,5 +13,20 @@ namespace BibliotecaFaber.Vista {
         public GestionLibros() {
             InitializeComponent();
         }
+        Controlador.Controlador con;
+        public void cargarControlador(Object cc) {
+            this.con = (Controlador.Controlador) cc;
+        }
+        private void GestionLibros_Load(object sender, EventArgs e) {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void GestionLibros_FormClosed(object sender, FormClosedEventArgs e) {
+            
+        }
     }
 }

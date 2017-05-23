@@ -31,6 +31,8 @@ namespace BibliotecaFaber.Controlador {
             inicio.cargarControlador(this);
             menu.cargarControlador(this);
             buscarLibros.cargarControlador(this);
+            gestionLibros.cargarControlador (this);
+            //prestamoLibro.cargarControlador (this);
             Application.Run(inicio);
             //inicio.Show(); *No funciona asi si es la primera vista*
         }
@@ -40,23 +42,53 @@ namespace BibliotecaFaber.Controlador {
             if (t.Rows.Count>0) {
                 
                 if (p.Equals(t.Rows[0].ItemArray[0].ToString())) {
-                    MessageBox.Show("Inicio de Sesion Correcto"); //Aqui o en la vista??
-                    iniciarVista(menu);
-                    inicio.Hide();
+                    MessageBox.Show("Usuario y contraseña correcta, bienvenido!"); //Aqui o en la vista??
+                    //iniciarVista(menu);
+                    //inicio.Hide();
+
+                    loginToMenu (this.inicio);
+                  
                 } else {
-                    MessageBox.Show("Contraseña Incorrecta"); //Lo mismo
+                    MessageBox.Show("La contraseña ingresada no es válida."); //Lo mismo
                 }
 
             } else {
-                MessageBox.Show("No Existe el Usuario"); //...
+                MessageBox.Show("El usuario ingresado no existe."); //...
             }
         }
 
         public void iniciarVista(Form vista) {
             vista.Show();
+            
             //buscarLibros.Show();
         }
 
+        public void cerrarVista(Form vista) {
+
+            vista.Dispose ();
+        }
+
+        public void cambiarVista(Form cerrar, Form abrir) {
+            cerrar.Dispose ();
+            abrir.Show ();
+            
+        }
+
+
+        /* CAMBIAR WEAS */
+
+        public void loginToMenu(InicioSesion inicioS) {
+            inicioS.Hide ();
+            new MenuInicial ().Show ();
+
+        }
+
+
+        public void menuToGestionLibros(MenuInicial mi) {
+            mi.Dispose ();
+            gestionLibros.Show ();
+
+        }
 
 
 
