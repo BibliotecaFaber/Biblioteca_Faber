@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliotecaFaber.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,18 @@ namespace BibliotecaFaber.Vista {
 
         private void GestionClientes_Load(object sender, EventArgs e) {
 
+        }
+
+        private void agregarClienteDB(object sender, EventArgs e) {
+            string run = rutTextBox.Text;
+            string nombre = nombreTextBox.Text;
+            int edad = int.Parse (edadTextBox.Text);
+            string telefono = telefonoTextBox.Text;
+            string email = emailTextBox.Text;
+
+            //Cliente cl = new Cliente ()
+
+            //con.insertCliente ();
         }
     }
 }

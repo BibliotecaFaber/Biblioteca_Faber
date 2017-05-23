@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.rutTextBox = new System.Windows.Forms.TextBox();
+            this.edadTextBox = new System.Windows.Forms.TextBox();
+            this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,6 +101,7 @@
             this.picAddUsr.Size = new System.Drawing.Size(50, 50);
             this.picAddUsr.TabIndex = 3;
             this.picAddUsr.TabStop = false;
+            this.picAddUsr.Click += new System.EventHandler(this.agregarClienteDB);
             // 
             // label1
             // 
@@ -129,40 +130,40 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Email:";
             // 
-            // textBox1
+            // nombreTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 329);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 20);
-            this.textBox1.TabIndex = 9;
+            this.nombreTextBox.Location = new System.Drawing.Point(65, 329);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(411, 20);
+            this.nombreTextBox.TabIndex = 9;
             // 
-            // textBox2
+            // rutTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 355);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 10;
+            this.rutTextBox.Location = new System.Drawing.Point(65, 355);
+            this.rutTextBox.Name = "rutTextBox";
+            this.rutTextBox.Size = new System.Drawing.Size(191, 20);
+            this.rutTextBox.TabIndex = 10;
             // 
-            // textBox3
+            // edadTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(303, 355);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 20);
-            this.textBox3.TabIndex = 11;
+            this.edadTextBox.Location = new System.Drawing.Point(303, 355);
+            this.edadTextBox.Name = "edadTextBox";
+            this.edadTextBox.Size = new System.Drawing.Size(173, 20);
+            this.edadTextBox.TabIndex = 11;
             // 
-            // textBox4
+            // telefonoTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(65, 384);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 20);
-            this.textBox4.TabIndex = 12;
+            this.telefonoTextBox.Location = new System.Drawing.Point(65, 384);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(191, 20);
+            this.telefonoTextBox.TabIndex = 12;
             // 
-            // textBox5
+            // emailTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(303, 384);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(173, 20);
-            this.textBox5.TabIndex = 13;
+            this.emailTextBox.Location = new System.Drawing.Point(303, 384);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(173, 20);
+            this.emailTextBox.TabIndex = 13;
             // 
             // pictureBox3
             // 
@@ -180,11 +181,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 452);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.telefonoTextBox);
+            this.Controls.Add(this.edadTextBox);
+            this.Controls.Add(this.rutTextBox);
+            this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -223,11 +224,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox rutTextBox;
+        private System.Windows.Forms.TextBox edadTextBox;
+        private System.Windows.Forms.TextBox telefonoTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

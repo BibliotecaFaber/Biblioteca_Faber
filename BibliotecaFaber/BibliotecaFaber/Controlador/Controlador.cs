@@ -100,5 +100,11 @@ namespace BibliotecaFaber.Controlador {
 
         }
 
+
+        public void insertCliente(Cliente c) {
+
+            c.agregarCliente ();
+
+        }
     }
 }

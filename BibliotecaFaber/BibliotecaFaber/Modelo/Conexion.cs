@@ -48,6 +48,7 @@ namespace BibliotecaFaber.Modelo {
                 cmd.ExecuteNonQuery();
             } catch (SQLiteException ex) {
                 //Add your exception code here.
+                MessageBox.Show ("El cliente ya se encuentra en la base de datos.");
             }
             sqlite.Close();
         }

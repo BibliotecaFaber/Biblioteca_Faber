@@ -19,7 +19,7 @@ namespace BibliotecaFaber {
             this.con = (Controlador.Controlador)cc;
         }
         private void Form1_Load(object sender, EventArgs e) {
-            tablaLibros.DataSource = con.conexion.getQuery("SELECT * FROM Libros");
+            tablaLibros.DataSource = con.conexion.getQuery("SELECT * FROM LIBRO");
             //EJEMPLO, SE DEBERÍAN SACAR DESDE LA CLASE LIBRO.ALGO
         }
 

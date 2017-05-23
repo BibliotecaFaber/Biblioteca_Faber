@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BibliotecaFaber.Modelo {
     class Cliente {
+
+       
 
         private string run;
         private string nombre;
@@ -41,5 +44,19 @@ namespace BibliotecaFaber.Modelo {
             get => email;
             set => email = value;
         }
+
+
+        public void agregarCliente() {
+            string insert = "INSERT INTO CLIENTE VALUES (\"" + this.run + "\", \"" + this.nombre + "\",  " + this.edad +
+                ", \"" + this.telefono + "\", \"" + this.email + "\");";
+
+            new Conexion ().sendQuery (insert);
+             
+
+            
+
+        }
+
+
     }
 }

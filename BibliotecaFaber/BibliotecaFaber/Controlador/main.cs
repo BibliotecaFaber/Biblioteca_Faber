@@ -1,3 +1,4 @@
+using BibliotecaFaber.Modelo;
 using BibliotecaFaber.Vista;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace BibliotecaFaber {
         /// </summary>
         [STAThread]
         static void Main() {
+            /*
+            Cliente cl = new Cliente ("19.571.033-3", "Carlos Ramírez", 20, "+56988267221", "victor@sonry.ml");
+            cl.agregarCliente ();
+            */
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Controlador.Controlador inicial = new Controlador.Controlador();
