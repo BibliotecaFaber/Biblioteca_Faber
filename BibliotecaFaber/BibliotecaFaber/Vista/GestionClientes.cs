@@ -10,8 +10,24 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Vista {
     public partial class GestionClientes : Form {
+
+        Controlador.Controlador con = new Controlador.Controlador ();
+
         public GestionClientes() {
             InitializeComponent();
+
+        }
+
+        private void volverMenu(object sender, EventArgs e) {
+            con.gestionClienteToMenu (this);
+        }
+
+        private void gestionCliente_closed(object sender, FormClosedEventArgs e) {
+            con.gestionClienteToMenu (this);
+        }
+
+        private void GestionClientes_Load(object sender, EventArgs e) {
+
         }
     }
 }

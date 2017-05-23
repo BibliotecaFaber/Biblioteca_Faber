@@ -14,7 +14,7 @@ namespace BibliotecaFaber {
         public BuscarLibros() {
             InitializeComponent();
         }
-        Controlador.Controlador con;
+        Controlador.Controlador con = new Controlador.Controlador ();
         public void cargarControlador(Object cc) {
             this.con = (Controlador.Controlador)cc;
         }
@@ -25,6 +25,11 @@ namespace BibliotecaFaber {
 
         private void button1_Click(object sender, EventArgs e) {
             
+        }
+
+        private void volverMenu(object sender, FormClosedEventArgs e) {
+            con.buscarLibrosToMenu (this);
+
         }
     }
 }

@@ -10,87 +10,95 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Controlador {
     class Controlador {
-        //MODELO
-        //public Libro libro = new Libro(0,"",""); //Ver Constructor vacio
-        //public Persona persona = new Persona();
-        //public Almacenamiento almacenamiento = new Almacenamiento();
-        //public Prestamo prestamo = new Prestamo();
-        public Conexion conexion = new Conexion();
-        //public Estante estante = new Estante();
 
-        //VISTA
-        public InicioSesion inicio = new InicioSesion();
-        public MenuInicial menu = new MenuInicial();
-        public GestionLibros gestionLibros = new GestionLibros();
-        public GestionClientes gestionClientes = new GestionClientes();
-        public PrestamoLibro prestamoLibro = new PrestamoLibro();
-        public BuscarLibros buscarLibros = new BuscarLibros();
+        public Conexion conexion = new Conexion ();
+        //InicioSesion inicio = new InicioSesion ();
 
-        
         public void inicioPrograma() {
-            inicio.cargarControlador(this);
-            menu.cargarControlador(this);
-            buscarLibros.cargarControlador(this);
-            gestionLibros.cargarControlador (this);
-            //prestamoLibro.cargarControlador (this);
-            Application.Run(inicio);
-            //inicio.Show(); *No funciona asi si es la primera vista*
+
+            Application.Run (new InicioSesion());
+            
+
         }
 
-        public void iniciarSesion(string u, string p) {
-            DataTable t = conexion.getQuery("SELECT Pass FROM Usuarios WHERE Usuario=\"" + u + "\""); //cn.selectQuery("SELECT Pass FROM Usuarios WHERE Usuario=\"" + u +"\"");
-            if (t.Rows.Count>0) {
-                
-                if (p.Equals(t.Rows[0].ItemArray[0].ToString())) {
-                    MessageBox.Show("Usuario y contraseña correcta, bienvenido!"); //Aqui o en la vista??
-                    //iniciarVista(menu);
-                    //inicio.Hide();
+       
+        public void loginToMenu(InicioSesion inis, string u, string p) {
+            
+            DataTable dt = conexion.getQuery ("SELECT Pass FROM Usuarios WHERE Usuario =\"" + u + "\"");
 
-                    loginToMenu (this.inicio);
-                  
-                } else {
-                    MessageBox.Show("La contraseña ingresada no es válida."); //Lo mismo
+            if (dt.Rows.Count > 0) {
+
+                if (p.Equals (dt.Rows [0].ItemArray [0].ToString ())) {
+
+                    MessageBox.Show ("Usuario y contraseña correctos, bienvenido!");
+                    inis.Hide ();
+                    new MenuInicial ().Show ();
                 }
-
-            } else {
-                MessageBox.Show("El usuario ingresado no existe."); //...
             }
+
+
         }
 
-        public void iniciarVista(Form vista) {
-            vista.Show();
-            
-            //buscarLibros.Show();
+        public void menuToGestionLibros(MenuInicial mi) {
+
+            mi.Dispose ();
+            new GestionLibros ().Show ();
         }
 
-        public void cerrarVista(Form vista) {
+        public void gestionToMenu(GestionLibros gl) {
 
-            vista.Dispose ();
-        }
-
-        public void cambiarVista(Form cerrar, Form abrir) {
-            cerrar.Dispose ();
-            abrir.Show ();
-            
-        }
-
-
-        /* CAMBIAR WEAS */
-
-        public void loginToMenu(InicioSesion inicioS) {
-            inicioS.Hide ();
+            gl.Dispose ();
             new MenuInicial ().Show ();
 
         }
 
+        public void menuToBuscarLibros(MenuInicial mi) {
 
-        public void menuToGestionLibros(MenuInicial mi) {
             mi.Dispose ();
-            gestionLibros.Show ();
+            new BuscarLibros ().Show ();
 
         }
 
+        public void buscarLibrosToMenu(BuscarLibros bl) {
 
+            bl.Dispose ();
+            new MenuInicial ().Show ();
+        }
+
+        public void logout(MenuInicial mi) {
+
+            mi.Dispose ();
+            new InicioSesion ().Show ();
+            
+        }
+
+        public void menuToGestionCliente(MenuInicial mi) {
+
+            mi.Dispose ();
+            new GestionClientes ().Show ();
+
+        }
+
+        public void gestionClienteToMenu(GestionClientes gc) {
+
+            gc.Dispose ();
+            new MenuInicial ().Show ();
+
+        }
+
+        public void menuToPrestamoLibros(MenuInicial mi) {
+
+            mi.Dispose ();
+            new PrestamoLibro ().Show ();
+
+        }
+
+        public void prestamoLibroToMenu(PrestamoLibro pl) {
+
+            pl.Dispose ();
+            new MenuInicial ().Show ();
+
+        }
 
     }
 }

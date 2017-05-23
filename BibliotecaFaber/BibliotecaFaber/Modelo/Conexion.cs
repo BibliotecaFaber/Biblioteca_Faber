@@ -30,6 +30,7 @@ namespace BibliotecaFaber.Modelo {
                 ad.Fill(dt); //fill the datasource
             } catch (SQLiteException ex) {
                 //Add your exception code here.
+                MessageBox.Show ("Exception: " + ex);
             }
             sqlite.Close();
             return dt;

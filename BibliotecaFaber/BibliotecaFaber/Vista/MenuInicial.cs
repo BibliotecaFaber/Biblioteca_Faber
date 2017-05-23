@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Vista {
     public partial class MenuInicial : Form {
-        Controlador.Controlador con;
+        Controlador.Controlador con = new Controlador.Controlador();
         public MenuInicial() {
             InitializeComponent();
         }
@@ -18,33 +18,26 @@ namespace BibliotecaFaber.Vista {
             this.con = (Controlador.Controlador)cc;
         }
 
-        private void MenuInicial_FormClosing(object sender, FormClosingEventArgs e) {
-
-        }
-
         private void MenuInicial_FormClosed(object sender, FormClosedEventArgs e) {
-            //con.menu.Close ();
-            //con.MenuCerrar (con.menu);
             Application.Exit ();
         }
 
         private void gestionLibros_Click(object sender, EventArgs e) {
-           
             con.menuToGestionLibros (this);
+        }
+
+        private void buscarLibros_click(object sender, EventArgs e) {
+            con.menuToBuscarLibros (this);
+        }
+
+
+        private void logout_click(object sender, EventArgs e) {
+            con.logout (this);
         }
 
 
 
-
-
-
-
-
-
-
-
-
-
+        
 
 
 
@@ -53,8 +46,12 @@ namespace BibliotecaFaber.Vista {
 
         }
 
-        private void icoBuscar_Click(object sender, EventArgs e) {
-            con.iniciarVista (con.buscarLibros);
+        private void gestionClientes_click(object sender, EventArgs e) {
+            con.menuToGestionCliente (this);
+        }
+
+        private void prestamoLibros_click(object sender, EventArgs e) {
+            con.menuToPrestamoLibros (this);
         }
     }
 }

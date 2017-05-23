@@ -28,7 +28,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buscarLibro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -75,31 +75,34 @@
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // button1
+            // buscarLibro
             // 
-            this.button1.Location = new System.Drawing.Point(164, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 29);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Buscar Libro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buscarLibro.Location = new System.Drawing.Point(164, 114);
+            this.buscarLibro.Name = "buscarLibro";
+            this.buscarLibro.Size = new System.Drawing.Size(92, 29);
+            this.buscarLibro.TabIndex = 5;
+            this.buscarLibro.Text = "Buscar Libro";
+            this.buscarLibro.UseVisualStyleBackColor = true;
+            this.buscarLibro.Click += new System.EventHandler(this.buscarLibro_Click);
             // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 165);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buscarLibro);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.inicioSesion_CERRADO);
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,6 +116,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buscarLibro;
     }
 }

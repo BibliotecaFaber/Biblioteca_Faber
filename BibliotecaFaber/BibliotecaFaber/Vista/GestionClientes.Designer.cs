@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionClientes));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRut = new System.Windows.Forms.Label();
@@ -37,10 +38,12 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddUsr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -73,7 +76,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Pencil_32;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(501, 390);
+            this.pictureBox2.Location = new System.Drawing.Point(502, 332);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 5;
@@ -83,7 +86,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Close_32;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(570, 390);
+            this.pictureBox1.Location = new System.Drawing.Point(571, 332);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 4;
@@ -93,7 +96,7 @@
             // 
             this.picAddUsr.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Add_32;
             this.picAddUsr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picAddUsr.Location = new System.Drawing.Point(635, 390);
+            this.picAddUsr.Location = new System.Drawing.Point(636, 332);
             this.picAddUsr.Name = "picAddUsr";
             this.picAddUsr.Size = new System.Drawing.Size(50, 50);
             this.picAddUsr.TabIndex = 3;
@@ -161,11 +164,22 @@
             this.textBox5.Size = new System.Drawing.Size(173, 20);
             this.textBox5.TabIndex = 13;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(568, 388);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 52);
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.volverMenu);
+            // 
             // GestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 452);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -180,12 +194,19 @@
             this.Controls.Add(this.lblRut);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GestionClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionClientes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.gestionCliente_closed);
+            this.Load += new System.EventHandler(this.GestionClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddUsr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +228,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

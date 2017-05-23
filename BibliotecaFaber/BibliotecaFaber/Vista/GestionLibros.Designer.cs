@@ -126,13 +126,14 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(530, 326);
+            this.pictureBox1.Location = new System.Drawing.Point(575, 329);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.boton_volver);
             // 
             // GestionLibros
             // 
@@ -150,7 +151,11 @@
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.tblLibros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GestionLibros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionLibros";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GestionLibros_FormClosed);
             this.Load += new System.EventHandler(this.GestionLibros_Load);
