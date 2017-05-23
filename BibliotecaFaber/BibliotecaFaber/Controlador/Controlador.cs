@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace BibliotecaFaber.Controlador {
     class Controlador {
         //MODELO
-        public Libro libro = new Libro(0,"",""); //Ver Constructor vacio
-        public Persona persona = new Persona();
-        public Almacenamiento almacenamiento = new Almacenamiento();
-        public Prestamo prestamo = new Prestamo();
+        //public Libro libro = new Libro(0,"",""); //Ver Constructor vacio
+        //public Persona persona = new Persona();
+        //public Almacenamiento almacenamiento = new Almacenamiento();
+        //public Prestamo prestamo = new Prestamo();
         public Conexion conexion = new Conexion();
         //public Estante estante = new Estante();
 
