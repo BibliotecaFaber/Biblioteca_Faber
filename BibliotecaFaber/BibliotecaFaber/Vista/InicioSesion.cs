@@ -31,5 +31,9 @@ namespace BibliotecaFaber.Vista {
         private void btnIniciar_Click(object sender, EventArgs e) {
             con.iniciarSesion(txtUsuario.Text,txtPass.Text);
         }
+
+        private void InicioSesion_FormClosed(object sender, FormClosedEventArgs e) {
+
+        }
     }
 }

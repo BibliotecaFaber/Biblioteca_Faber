@@ -13,5 +13,12 @@ namespace BibliotecaFaber.Vista {
         public PrestamoLibro() {
             InitializeComponent();
         }
+        Controlador.Controlador con;
+        public void cargarControlador(Object cc) {
+            this.con = (Controlador.Controlador)cc;
+        }
+        private void PrestamoLibro_Load(object sender, EventArgs e) {
+
+        }
     }
 }

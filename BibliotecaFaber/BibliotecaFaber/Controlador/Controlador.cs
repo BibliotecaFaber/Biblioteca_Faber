@@ -25,12 +25,13 @@ namespace BibliotecaFaber.Controlador {
         public GestionClientes gestionClientes = new GestionClientes();
         public PrestamoLibro prestamoLibro = new PrestamoLibro();
         public BuscarLibros buscarLibros = new BuscarLibros();
-
+        
         
         public void inicioPrograma() {
             inicio.cargarControlador(this);
             menu.cargarControlador(this);
             buscarLibros.cargarControlador(this);
+            gestionLibros.cargarControlador(this);
             Application.Run(inicio);
             //inicio.Show(); *No funciona asi si es la primera vista*
         }
@@ -43,6 +44,7 @@ namespace BibliotecaFaber.Controlador {
                     MessageBox.Show("Inicio de Sesion Correcto"); //Aqui o en la vista??
                     iniciarVista(menu);
                     inicio.Hide();
+                    //inicio.Dispose();// sd
                 } else {
                     MessageBox.Show("Contraseña Incorrecta"); //Lo mismo
                 }
@@ -54,9 +56,16 @@ namespace BibliotecaFaber.Controlador {
 
         public void iniciarVista(Form vista) {
             vista.Show();
-            //buscarLibros.Show();
         }
 
+        public void menuToGestionLibros(MenuInicial mi) {
+            mi.Dispose();
+            gestionLibros.Show();
+        }
+
+        public void cerrarVista(Form vista) {
+            vista.Dispose();
+        }
 
 
 

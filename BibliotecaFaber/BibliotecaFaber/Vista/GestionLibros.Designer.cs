@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionLibros));
             this.tblLibros = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblAutor = new System.Windows.Forms.Label();
@@ -32,8 +33,9 @@
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtEditorial = new System.Windows.Forms.TextBox();
             this.chkPrestamo = new System.Windows.Forms.CheckBox();
-            this.lblUbicacion = new System.Windows.Forms.Label();
+            this.imgUbicacion = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUbicacion)).BeginInit();
             this.SuspendLayout();
             // 
             // tblLibros
@@ -43,6 +45,7 @@
             this.tblLibros.Name = "tblLibros";
             this.tblLibros.Size = new System.Drawing.Size(660, 259);
             this.tblLibros.TabIndex = 0;
+            this.tblLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblLibros_CellContentClick);
             // 
             // lblNombre
             // 
@@ -110,22 +113,24 @@
             this.chkPrestamo.TabIndex = 9;
             this.chkPrestamo.Text = "En Prestamo";
             this.chkPrestamo.UseVisualStyleBackColor = true;
+            this.chkPrestamo.CheckedChanged += new System.EventHandler(this.chkPrestamo_CheckedChanged);
             // 
-            // lblUbicacion
+            // imgUbicacion
             // 
-            this.lblUbicacion.AutoSize = true;
-            this.lblUbicacion.Location = new System.Drawing.Point(76, 364);
-            this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(31, 13);
-            this.lblUbicacion.TabIndex = 10;
-            this.lblUbicacion.Text = "????";
+            this.imgUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgUbicacion.Location = new System.Drawing.Point(71, 356);
+            this.imgUbicacion.Name = "imgUbicacion";
+            this.imgUbicacion.Size = new System.Drawing.Size(318, 55);
+            this.imgUbicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUbicacion.TabIndex = 10;
+            this.imgUbicacion.TabStop = false;
             // 
             // GestionLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 415);
-            this.Controls.Add(this.lblUbicacion);
+            this.Controls.Add(this.imgUbicacion);
             this.Controls.Add(this.chkPrestamo);
             this.Controls.Add(this.txtEditorial);
             this.Controls.Add(this.txtAutor);
@@ -135,9 +140,12 @@
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.tblLibros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionLibros";
             this.Text = "GestionLibros";
+            this.Load += new System.EventHandler(this.GestionLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUbicacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +162,6 @@
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtEditorial;
         private System.Windows.Forms.CheckBox chkPrestamo;
-        private System.Windows.Forms.Label lblUbicacion;
+        private System.Windows.Forms.PictureBox imgUbicacion;
     }
 }

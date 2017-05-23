@@ -23,12 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionClientes));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRut = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picAddUsr = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +35,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAddUsr = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,36 +69,6 @@
             this.lblRut.Size = new System.Drawing.Size(27, 13);
             this.lblRut.TabIndex = 2;
             this.lblRut.Text = "Rut:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Pencil_32;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(501, 390);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Close_32;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(570, 390);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picAddUsr
-            // 
-            this.picAddUsr.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Add_32;
-            this.picAddUsr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picAddUsr.Location = new System.Drawing.Point(635, 390);
-            this.picAddUsr.Name = "picAddUsr";
-            this.picAddUsr.Size = new System.Drawing.Size(50, 50);
-            this.picAddUsr.TabIndex = 3;
-            this.picAddUsr.TabStop = false;
             // 
             // label1
             // 
@@ -161,6 +132,36 @@
             this.textBox5.Size = new System.Drawing.Size(173, 20);
             this.textBox5.TabIndex = 13;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Pencil_32;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(501, 390);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Close_32;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(570, 390);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picAddUsr
+            // 
+            this.picAddUsr.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Add_32;
+            this.picAddUsr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picAddUsr.Location = new System.Drawing.Point(635, 390);
+            this.picAddUsr.Name = "picAddUsr";
+            this.picAddUsr.Size = new System.Drawing.Size(50, 50);
+            this.picAddUsr.TabIndex = 3;
+            this.picAddUsr.TabStop = false;
+            // 
             // GestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,8 +181,10 @@
             this.Controls.Add(this.lblRut);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionClientes";
             this.Text = "GestionClientes";
+            this.Load += new System.EventHandler(this.GestionClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

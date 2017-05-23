@@ -13,5 +13,13 @@ namespace BibliotecaFaber.Vista {
         public GestionClientes() {
             InitializeComponent();
         }
+        Controlador.Controlador con;
+        public void cargarControlador(Object cc) {
+            this.con = (Controlador.Controlador)cc;
+        }
+
+        private void GestionClientes_Load(object sender, EventArgs e) {
+
+        }
     }
 }

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamoLibro));
             this.SuspendLayout();
             // 
             // PrestamoLibro
@@ -30,8 +31,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 377);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrestamoLibro";
             this.Text = "PrestamoLibro";
+            this.Load += new System.EventHandler(this.PrestamoLibro_Load);
             this.ResumeLayout(false);
 
         }

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -66,7 +67,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(87, 113);
+            this.btnIniciar.Location = new System.Drawing.Point(81, 108);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(129, 27);
             this.btnIniciar.TabIndex = 4;
@@ -84,8 +85,10 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InicioSesion";
             this.Text = "Iniciar Sesion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InicioSesion_FormClosed);
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

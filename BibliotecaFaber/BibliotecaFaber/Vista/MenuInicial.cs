@@ -18,12 +18,17 @@ namespace BibliotecaFaber.Vista {
             this.con = (Controlador.Controlador)cc;
         }
 
-        private void MenuInicial_Load(object sender, EventArgs e) {
-
-        }
-
         private void icoBuscar_Click(object sender, EventArgs e) {
             con.iniciarVista(con.buscarLibros);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+            MessageBox.Show("holi");
+            con.iniciarVista(con.gestionLibros);
+        }
+
+        private void MenuInicial_Load(object sender, EventArgs e) {
+
         }
     }
 }
