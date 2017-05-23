@@ -63,9 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelo\Almacenamiento.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Controlador\Controlador.cs" />
+    <Compile Include="Modelo\Estante.cs" />
+    <Compile Include="Modelo\Libro.cs" />
+    <Compile Include="Modelo\Prestamo.cs" />
     <Compile Include="Vista\BuscarLibros.cs">
       <SubType>Form</SubType>
     </Compile>
