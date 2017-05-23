@@ -16,9 +16,8 @@ namespace BibliotecaFaber.Modelo {
 
         public Conexion() {
             sqlite = new SQLiteConnection(@"Data Source=C:\db\biblio.db");
-
         }
-        public DataTable selectQuery(string query) {
+        public DataTable getQuery(string query) {
             SQLiteDataAdapter ad;
             DataTable dt = new DataTable();
 
@@ -35,5 +34,22 @@ namespace BibliotecaFaber.Modelo {
             sqlite.Close();
             return dt;
         }
+
+        public void sendQuery(string query) {
+            SQLiteDataAdapter ad;
+            DataTable dt = new DataTable();
+
+            try {
+                SQLiteCommand cmd;
+                sqlite.Open();  //Initiate connection to the db
+                cmd = sqlite.CreateCommand();
+                cmd.CommandText = query;  //set the passed query
+                cmd.ExecuteNonQuery();
+            } catch (SQLiteException ex) {
+                //Add your exception code here.
+            }
+            sqlite.Close();
+        }
+
     }
 }

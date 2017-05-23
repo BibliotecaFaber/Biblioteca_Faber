@@ -14,8 +14,10 @@ namespace BibliotecaFaber {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicioSesion());
-            Application.Run(new Form1());
+            Controlador.Controlador inicial = new Controlador.Controlador();
+            inicial.inicioPrograma();
+            //Application.Run(new Controlador());
+            //Application.Run(new Form1());
 
 
                //esta wea es porque puedo

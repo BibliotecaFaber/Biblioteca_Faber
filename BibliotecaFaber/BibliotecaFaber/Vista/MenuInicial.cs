@@ -10,12 +10,20 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Vista {
     public partial class MenuInicial : Form {
+        Controlador.Controlador con;
         public MenuInicial() {
             InitializeComponent();
+        }
+        public void cargarControlador(Object cc) {
+            this.con = (Controlador.Controlador)cc;
         }
 
         private void MenuInicial_Load(object sender, EventArgs e) {
 
+        }
+
+        private void icoBuscar_Click(object sender, EventArgs e) {
+            con.iniciarVista(con.buscarLibros);
         }
     }
 }
