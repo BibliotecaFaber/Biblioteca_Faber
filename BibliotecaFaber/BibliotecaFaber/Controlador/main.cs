@@ -18,6 +18,7 @@ namespace BibliotecaFaber {
             cl.agregarCliente ();
             */
 
+            //new Conexion ().sendQuery ("DELETE FROM CLIENTE WHERE CLIENTE.RUN_CLIENTE = 195710333;");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
