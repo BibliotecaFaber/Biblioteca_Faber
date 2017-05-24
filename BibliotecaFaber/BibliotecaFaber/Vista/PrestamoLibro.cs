@@ -10,8 +10,19 @@ using System.Windows.Forms;
 
 namespace BibliotecaFaber.Vista {
     public partial class PrestamoLibro : Form {
+
+        Controlador.Controlador con = new Controlador.Controlador ();
+
         public PrestamoLibro() {
             InitializeComponent();
+        }
+
+        private void prestamoLibro_CLOSED(object sender, FormClosedEventArgs e) {
+            con.prestamoLibroToMenu (this);
+        }
+
+        private void volverMenu(object sender, EventArgs e) {
+            con.prestamoLibroToMenu (this);
         }
     }
 }

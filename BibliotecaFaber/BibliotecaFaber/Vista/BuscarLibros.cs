@@ -14,17 +14,22 @@ namespace BibliotecaFaber {
         public BuscarLibros() {
             InitializeComponent();
         }
-        Controlador.Controlador con;
+        Controlador.Controlador con = new Controlador.Controlador ();
         public void cargarControlador(Object cc) {
             this.con = (Controlador.Controlador)cc;
         }
         private void Form1_Load(object sender, EventArgs e) {
-            tablaLibros.DataSource = con.conexion.getQuery("SELECT * FROM Libros");
+            tablaLibros.DataSource = con.conexion.getQuery("SELECT * FROM LIBRO");
             //EJEMPLO, SE DEBERÍAN SACAR DESDE LA CLASE LIBRO.ALGO
         }
 
         private void button1_Click(object sender, EventArgs e) {
             
+        }
+
+        private void volverMenu(object sender, FormClosedEventArgs e) {
+            con.buscarLibrosToMenu (this);
+
         }
     }
 }

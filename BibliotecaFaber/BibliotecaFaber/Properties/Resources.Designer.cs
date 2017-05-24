@@ -143,6 +143,16 @@ namespace BibliotecaFaber.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Volver {
+            get {
+                object obj = ResourceManager.GetObject("Volver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Window_App_List_Close_32 {
             get {
                 object obj = ResourceManager.GetObject("Window-App-List-Close-32", resourceCulture);

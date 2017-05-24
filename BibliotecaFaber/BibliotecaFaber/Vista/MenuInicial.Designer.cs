@@ -27,17 +27,17 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.icoBuscar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.boton_gestionCliente = new System.Windows.Forms.PictureBox();
+            this.boton_logout = new System.Windows.Forms.PictureBox();
+            this.boton_prestamoLibros = new System.Windows.Forms.PictureBox();
+            this.boton_buscarLibros = new System.Windows.Forms.PictureBox();
+            this.boton_gestionLibros = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_gestionCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_prestamoLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_buscarLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_gestionLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,56 +76,60 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Cerrar Sesion";
             // 
-            // pictureBox5
+            // boton_gestionCliente
             // 
-            this.pictureBox5.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_32;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Location = new System.Drawing.Point(59, 109);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.boton_gestionCliente.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_32;
+            this.boton_gestionCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_gestionCliente.Location = new System.Drawing.Point(59, 109);
+            this.boton_gestionCliente.Name = "boton_gestionCliente";
+            this.boton_gestionCliente.Size = new System.Drawing.Size(50, 50);
+            this.boton_gestionCliente.TabIndex = 9;
+            this.boton_gestionCliente.TabStop = false;
+            this.boton_gestionCliente.Click += new System.EventHandler(this.gestionClientes_click);
             // 
-            // pictureBox4
+            // boton_logout
             // 
-            this.pictureBox4.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Window_App_List_Close_32;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(373, 109);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.boton_logout.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Window_App_List_Close_32;
+            this.boton_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_logout.Location = new System.Drawing.Point(373, 109);
+            this.boton_logout.Name = "boton_logout";
+            this.boton_logout.Size = new System.Drawing.Size(50, 50);
+            this.boton_logout.TabIndex = 7;
+            this.boton_logout.TabStop = false;
+            this.boton_logout.Click += new System.EventHandler(this.logout_click);
             // 
-            // pictureBox3
+            // boton_prestamoLibros
             // 
-            this.pictureBox3.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_Bookmarks_32;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(217, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.boton_prestamoLibros.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_Bookmarks_32;
+            this.boton_prestamoLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_prestamoLibros.Location = new System.Drawing.Point(217, 25);
+            this.boton_prestamoLibros.Name = "boton_prestamoLibros";
+            this.boton_prestamoLibros.Size = new System.Drawing.Size(50, 50);
+            this.boton_prestamoLibros.TabIndex = 5;
+            this.boton_prestamoLibros.TabStop = false;
+            this.boton_prestamoLibros.Click += new System.EventHandler(this.prestamoLibros_click);
             // 
-            // icoBuscar
+            // boton_buscarLibros
             // 
-            this.icoBuscar.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_Search_32__1_;
-            this.icoBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.icoBuscar.Location = new System.Drawing.Point(373, 25);
-            this.icoBuscar.Name = "icoBuscar";
-            this.icoBuscar.Size = new System.Drawing.Size(50, 50);
-            this.icoBuscar.TabIndex = 3;
-            this.icoBuscar.TabStop = false;
-            this.icoBuscar.Click += new System.EventHandler(this.icoBuscar_Click);
+            this.boton_buscarLibros.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_Search_32__1_;
+            this.boton_buscarLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_buscarLibros.Location = new System.Drawing.Point(373, 25);
+            this.boton_buscarLibros.Name = "boton_buscarLibros";
+            this.boton_buscarLibros.Size = new System.Drawing.Size(50, 50);
+            this.boton_buscarLibros.TabIndex = 3;
+            this.boton_buscarLibros.TabStop = false;
+            this.boton_buscarLibros.Click += new System.EventHandler(this.buscarLibros_click);
             // 
-            // pictureBox1
+            // boton_gestionLibros
             // 
-            this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_32;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.boton_gestionLibros.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Book_32;
+            this.boton_gestionLibros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_gestionLibros.Location = new System.Drawing.Point(59, 25);
+            this.boton_gestionLibros.Name = "boton_gestionLibros";
+            this.boton_gestionLibros.Size = new System.Drawing.Size(50, 50);
+            this.boton_gestionLibros.TabIndex = 1;
+            this.boton_gestionLibros.TabStop = false;
+            this.boton_gestionLibros.Click += new System.EventHandler(this.gestionLibros_Click);
             // 
             // label5
             // 
@@ -142,38 +146,44 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 190);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.boton_gestionCliente);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.boton_logout);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.boton_prestamoLibros);
             this.Controls.Add(this.lblBuscar);
-            this.Controls.Add(this.icoBuscar);
+            this.Controls.Add(this.boton_buscarLibros);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.boton_gestionLibros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MenuInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuInicial";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuInicial_FormClosed);
             this.Load += new System.EventHandler(this.MenuInicial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Click += new System.EventHandler(this.gestionLibros_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.boton_gestionCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_prestamoLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_buscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_gestionLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox boton_gestionLibros;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox icoBuscar;
+        private System.Windows.Forms.PictureBox boton_buscarLibros;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox boton_prestamoLibros;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox boton_logout;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox boton_gestionCliente;
         private System.Windows.Forms.Label label5;
     }
 }

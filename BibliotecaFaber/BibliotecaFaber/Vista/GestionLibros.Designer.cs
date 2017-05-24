@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionLibros));
             this.tblLibros = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblAutor = new System.Windows.Forms.Label();
@@ -33,7 +34,9 @@
             this.txtEditorial = new System.Windows.Forms.TextBox();
             this.chkPrestamo = new System.Windows.Forms.CheckBox();
             this.lblUbicacion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblLibros
@@ -120,11 +123,24 @@
             this.lblUbicacion.TabIndex = 10;
             this.lblUbicacion.Text = "????";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(575, 329);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.boton_volver);
+            // 
             // GestionLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 415);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.chkPrestamo);
             this.Controls.Add(this.txtEditorial);
@@ -135,9 +151,16 @@
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.tblLibros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GestionLibros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionLibros";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GestionLibros_FormClosed);
+            this.Load += new System.EventHandler(this.GestionLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +178,6 @@
         private System.Windows.Forms.TextBox txtEditorial;
         private System.Windows.Forms.CheckBox chkPrestamo;
         private System.Windows.Forms.Label lblUbicacion;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
