@@ -50,7 +50,7 @@ namespace BibliotecaFaber.Vista {
         private void picAgregar_Click(object sender, EventArgs e) {
             int id = 0;
             if (int.TryParse(txtCodigo.Text, out id)) {
-                if (filat != 10 && columnat != 10) {
+                if (filat != 11 && columnat != 11) {
                     con.insertLibro(new Libro(id, txtNombre.Text, txtAutor.Text, txtEditorial.Text, filat, columnat));
                     updateTabla();
                 } else {
@@ -69,10 +69,14 @@ namespace BibliotecaFaber.Vista {
                 txtNombre.Text = tblLibros.Rows[row].Cells[1].Value.ToString();
                 txtAutor.Text = tblLibros.Rows[row].Cells[2].Value.ToString();
                 txtEditorial.Text = tblLibros.Rows[row].Cells[3].Value.ToString();
-                string fila = tblLibros.Rows[row].Cells[4].Value.ToString();
-                string col = tblLibros.Rows[row].Cells[5].Value.ToString();
-                string Pos_Tabla = fila + "_" + col;
-                txtUbicacion.Text = fila + "," + col;
+                int inf = int.Parse(tblLibros.Rows[row].Cells[4].Value.ToString());
+                inf++;
+                int colf = int.Parse(tblLibros.Rows[row].Cells[5].Value.ToString());
+                colf++;
+                txtUbicacion.Text = inf + "," + colf;
+                inf--;
+                colf--;
+                string Pos_Tabla = inf + "_" + colf;
                 ResourceManager rm = Resources.ResourceManager;
                 Bitmap tabla = (Bitmap)rm.GetObject(Pos_Tabla);
                 tablaEstante.Image = tabla;
@@ -92,21 +96,35 @@ namespace BibliotecaFaber.Vista {
         int columnat = 0;
         private void txtUbicacion_TextChanged(object sender, EventArgs e) {
             string[] test = txtUbicacion.Text.Split(',');
-            int f, c;
+            int f, c  = 0;
             if (test.Length >1) {
                 if (int.TryParse(test[0], out f) && int.TryParse(test[1], out c)) {
-                    ResourceManager rm = Resources.ResourceManager;
-                    Bitmap tabla = (Bitmap)rm.GetObject(f + "_" + c);
-                    tablaEstante.Image = tabla;
-                    filat = f;
-                    columnat = c;
+                    f --;
+                    c --;
+                    if (f<0 || f >= 3 || c<0 || c >= 10) {
+                        ResourceManager re = Resources.ResourceManager;
+                        Bitmap tablas = (Bitmap)re.GetObject("error_tabla");
+                        tablaEstante.Image = tablas;
+                        filat = 11;
+                        columnat = 11;
+                    } else {
+                        ResourceManager rm = Resources.ResourceManager;
+                        Bitmap tabla = (Bitmap)rm.GetObject(f + "_" + c);
+                        tablaEstante.Image = tabla;
+                        filat = f;
+                        columnat = c;
+                    }
+                    
+                    
                 } else {
                     ResourceManager rm = Resources.ResourceManager;
                     Bitmap tabla = (Bitmap)rm.GetObject("error_tabla");
                     tablaEstante.Image = tabla;
-                    filat = 10;
-                    columnat = 10;
+                    filat = 11;
+                    columnat = 11;
                 }
+                
+                
             }
 
         }
@@ -115,8 +133,8 @@ namespace BibliotecaFaber.Vista {
             int row = tblLibros.CurrentCell.RowIndex;
             int id = 0;
             if (int.TryParse(txtCodigo.Text, out id)) {
-               int codigo = int.Parse(tblLibros.Rows[row].Cells[0].Value.ToString());
-                if (filat != 10 && columnat != 10) {
+                int codigo = int.Parse(tblLibros.Rows[row].Cells[0].Value.ToString());
+                if (filat !=11 && columnat!=11) {
                     con.modificarLibro(new Libro(codigo, txtNombre.Text, txtAutor.Text, txtEditorial.Text, filat, columnat), id);
                     //Falta validar rut al hacer esto, esperando el commit que lo trae para conectarlo
                     updateTabla();
