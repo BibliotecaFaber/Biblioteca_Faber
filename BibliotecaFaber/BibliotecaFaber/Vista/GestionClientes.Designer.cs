@@ -48,6 +48,8 @@
             // 
             // tblClientes
             // 
+            this.tblClientes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tblClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.tblClientes.Location = new System.Drawing.Point(12, 12);
@@ -177,9 +179,10 @@
             // picVolver
             // 
             this.picVolver.Image = ((System.Drawing.Image)(resources.GetObject("picVolver.Image")));
-            this.picVolver.Location = new System.Drawing.Point(568, 388);
+            this.picVolver.Location = new System.Drawing.Point(636, 390);
             this.picVolver.Name = "picVolver";
-            this.picVolver.Size = new System.Drawing.Size(53, 52);
+            this.picVolver.Size = new System.Drawing.Size(50, 50);
+            this.picVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picVolver.TabIndex = 14;
             this.picVolver.TabStop = false;
             this.picVolver.Click += new System.EventHandler(this.volverMenu);

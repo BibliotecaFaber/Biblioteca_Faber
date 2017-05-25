@@ -35,9 +35,9 @@ namespace BibliotecaFaber.Vista {
             tblClientes.DataSource = con.obtenerClientes(new Cliente("", "", 0, "", ""));
             tblClientes.Columns[0].HeaderText = "Rut Cliente";
             tblClientes.Columns[1].HeaderText = "Nombre";
-            tblClientes.Columns[1].HeaderText = "Edad";
-            tblClientes.Columns[1].HeaderText = "Telefono";
-            tblClientes.Columns[1].HeaderText = "Email";
+            tblClientes.Columns[2].HeaderText = "Edad";
+            tblClientes.Columns[3].HeaderText = "Telefono";
+            tblClientes.Columns[4].HeaderText = "Email";
             tblClientes.Rows[0].Selected = true;
         }
 
