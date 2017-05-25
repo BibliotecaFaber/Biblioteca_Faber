@@ -37,7 +37,7 @@ namespace BibliotecaFaber {
             tablaLibros.Columns [4].Visible = false;
             tablaLibros.Columns [5].Visible = false;
             tablaLibros.Columns [6].HeaderText = "Prestado";
-            tablaLibros.Columns [7].Visible = false;
+            
 
         }
 
@@ -54,7 +54,7 @@ namespace BibliotecaFaber {
                 tablaLibros.Columns [4].Visible = false;
                 tablaLibros.Columns [5].Visible = false;
                 tablaLibros.Columns [6].HeaderText = "Prestado";
-                tablaLibros.Columns [7].Visible = false;
+                
 
 
             } else {
@@ -66,7 +66,7 @@ namespace BibliotecaFaber {
                 tablaLibros.Columns [4].Visible = false;
                 tablaLibros.Columns [5].Visible = false;
                 tablaLibros.Columns [6].HeaderText = "Prestado";
-                tablaLibros.Columns [7].Visible = false;
+                
 
                 MessageBox.Show ("Ingrese un nombre de libro primero!");
             }

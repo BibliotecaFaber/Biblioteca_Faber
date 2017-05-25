@@ -96,11 +96,18 @@ namespace BibliotecaFaber.Vista {
         private void tblClientes_SelectionChanged(object sender, EventArgs e) {
             if (tblClientes.CurrentCell != null) {
                 int row = tblClientes.CurrentCell.RowIndex;
-                rutTextBox.Text = tblClientes.Rows[row].Cells[0].Value.ToString();
-                nombreTextBox.Text = tblClientes.Rows[row].Cells[1].Value.ToString();
-                edadTextBox.Text = tblClientes.Rows[row].Cells[2].Value.ToString();
-                telefonoTextBox.Text = tblClientes.Rows[row].Cells[3].Value.ToString();
-                emailTextBox.Text = tblClientes.Rows[row].Cells[4].Value.ToString();
+                if (tblClientes.Rows [row].Cells [0].Value != tblClientes.Rows [row].Cells [1].Value) {
+                    picEliminar.Enabled = true;
+
+                    rutTextBox.Text = tblClientes.Rows [row].Cells [0].Value.ToString ();
+                    nombreTextBox.Text = tblClientes.Rows [row].Cells [1].Value.ToString ();
+                    edadTextBox.Text = tblClientes.Rows [row].Cells [2].Value.ToString ();
+                    telefonoTextBox.Text = tblClientes.Rows [row].Cells [3].Value.ToString ();
+                    emailTextBox.Text = tblClientes.Rows [row].Cells [4].Value.ToString ();
+                } else {
+                    picEliminar.Enabled = false;
+                }
+
             }
         }
 
@@ -119,14 +126,26 @@ namespace BibliotecaFaber.Vista {
         }
 
         private void picEliminar_Click(object sender, EventArgs e) {
+
             int row = tblClientes.CurrentCell.RowIndex;
-            string rut = tblClientes.Rows[row].Cells[0].Value.ToString();
-            string nombre = tblClientes.Rows[row].Cells[1].Value.ToString();
-            int edad = int.Parse(tblClientes.Rows[row].Cells[2].Value.ToString());
-            string telefono = tblClientes.Rows[row].Cells[3].Value.ToString();
-            string email = tblClientes.Rows[row].Cells[4].Value.ToString();
-            con.eliminarCliente(new Cliente(rut,nombre,edad,telefono,email));
-            updateTabla();
+
+            string run = tblClientes.Rows [row].Cells [0].Value.ToString ();
+            string nombre= tblClientes.Rows [row].Cells [1].Value.ToString ();
+            int edad = int.Parse(tblClientes.Rows [row].Cells [2].Value.ToString());
+            string telefono = tblClientes.Rows [row].Cells [3].Value.ToString ();
+            string email= tblClientes.Rows [row].Cells [4].Value.ToString ();
+
+            con.eliminarCliente(new Cliente (run, nombre, edad, telefono, email));
+
+            updateTabla ();
+            rutTextBox.Text = "";
+            telefonoTextBox.Text = "";
+            nombreTextBox.Text = "";
+            edadTextBox.Text = "";
+            emailTextBox.Text = "";
+
+
         }
+
     }
 }

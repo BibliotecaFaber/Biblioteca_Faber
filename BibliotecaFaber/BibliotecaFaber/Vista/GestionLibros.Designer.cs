@@ -188,6 +188,7 @@
             this.picEliminar.Size = new System.Drawing.Size(50, 50);
             this.picEliminar.TabIndex = 13;
             this.picEliminar.TabStop = false;
+            this.picEliminar.Click += new System.EventHandler(this.picEliminar_Click);
             // 
             // picAgregar
             // 

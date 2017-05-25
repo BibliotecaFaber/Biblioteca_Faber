@@ -51,7 +51,29 @@ namespace BibliotecaFaber.Modelo {
                 cmd.ExecuteNonQuery();
             } catch (SQLiteException ex) {
                 //Add your exception code here.
-                MessageBox.Show ("El cliente ya se encuentra en la base de datos.");
+                if (query.Contains ("INSERT") && query.Contains ("CLIENTE")) {
+                    MessageBox.Show ("El cliente ya se encuentra en la base de datos.");
+                } else if (query.Contains ("INSERT") && query.Contains ("LIBRO")) {
+                    MessageBox.Show ("El libro ya se encuentra en la base de datos.");
+                } else if (query.Contains ("INSERT") && query.Contains ("PRESTAMO")) {
+                    MessageBox.Show ("El prestamo ya se encuentra en la base de datos.");
+                } else if (query.Contains ("UPDATE") && query.Contains ("CLIENTE")) {
+                    MessageBox.Show ("No se ha podido realizar la modificación al cliente" +
+                        " porque no existe en la base de datos.");
+                } else if (query.Contains ("UPDATE") && query.Contains ("LIBRO")) {
+                    MessageBox.Show ("No se ha podido realizar la modificación al libro" +
+                        " porque no existe en la base de datos.");
+                } else if (query.Contains ("UPDATE") && query.Contains ("PRESTAMO")) {
+                    MessageBox.Show ("No se ha podido modificar el prestamo porque no existe" +
+                        " en la base de datos.");
+                } else if (query.Contains ("DELETE") && query.Contains ("CLIENTE")) {
+                    MessageBox.Show ("No se ha podido eliminar el cliente porque " +
+                        "no se encuentra en la base de datos.");
+                } else if (query.Contains ("DELETE") && query.Contains ("LIBRO")) {
+                    MessageBox.Show ("No se ha podido eliminar el libro.");
+                } else if (query.Contains ("DELETE") && query.Contains ("PRESTAMO")) {
+                    MessageBox.Show ("No se ha podido eliminar el prestamo.");
+                }
             }
             Sqlite.Close();
         }
