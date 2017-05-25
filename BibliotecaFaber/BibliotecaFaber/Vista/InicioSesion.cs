@@ -42,7 +42,7 @@ namespace BibliotecaFaber.Vista {
 
         
         private void buscarLibro_Click(object sender, EventArgs e) {
-            MessageBox.Show ("Estamos trabajando para usted.");
+            new Controlador.Controlador ().menuToBuscarLibros (this, 1);
         }
 
 

@@ -240,7 +240,7 @@
             this.MinimizeBox = false;
             this.Name = "GestionLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GestionLibros";
+            this.Text = "Gestion de Libros";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GestionLibros_FormClosed);
             this.Load += new System.EventHandler(this.GestionLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblLibros)).EndInit();

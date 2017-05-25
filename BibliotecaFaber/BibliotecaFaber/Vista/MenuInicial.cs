@@ -27,7 +27,7 @@ namespace BibliotecaFaber.Vista {
         }
 
         private void buscarLibros_click(object sender, EventArgs e) {
-            con.menuToBuscarLibros (this);
+            con.menuToBuscarLibros (this, 0);
         }
 
 
