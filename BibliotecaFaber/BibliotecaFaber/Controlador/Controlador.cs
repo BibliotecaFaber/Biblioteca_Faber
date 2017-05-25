@@ -106,5 +106,39 @@ namespace BibliotecaFaber.Controlador {
             c.agregarCliente ();
 
         }
+
+        public void eliminarCliente(Cliente c) {
+            c.eliminarCliente();
+        }
+
+        public void modificarCliente(Cliente c, string currut) {
+            c.modificarCliente(currut);
+        }
+
+
+        public DataTable obtenerClientes(Cliente c) {
+            return c.cargarClientes();
+        }
+
+        public void insertLibro(Libro l) {
+
+            l.agregarLibro();
+
+        }
+
+        public void eliminarLibro(Libro l) {
+            l.eliminarLibro();
+        }
+
+        public void modificarLibro(Libro l, int curid) {
+            l.modificarLibro(curid);
+        }
+
+
+        public DataTable obtenerLibros(Libro l) {
+            return l.cargarLibros();
+        }
+
+
     }
 }

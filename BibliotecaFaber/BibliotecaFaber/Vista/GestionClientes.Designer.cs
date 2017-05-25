@@ -24,11 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionClientes));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tblClientes = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRut = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picModificar = new System.Windows.Forms.PictureBox();
+            this.picEliminar = new System.Windows.Forms.PictureBox();
             this.picAddUsr = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,21 +38,30 @@
             this.edadTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picVolver = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picModificar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddUsr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVolver)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tblClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(684, 299);
-            this.dataGridView1.TabIndex = 0;
+            this.tblClientes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tblClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.tblClientes.Location = new System.Drawing.Point(12, 12);
+            this.tblClientes.MultiSelect = false;
+            this.tblClientes.Name = "tblClientes";
+            this.tblClientes.ReadOnly = true;
+            this.tblClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblClientes.ShowEditingIcon = false;
+            this.tblClientes.Size = new System.Drawing.Size(684, 299);
+            this.tblClientes.TabIndex = 0;
+            this.tblClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblClientes_CellContentClick);
+            this.tblClientes.SelectionChanged += new System.EventHandler(this.tblClientes_SelectionChanged);
             // 
             // lblNombre
             // 
@@ -72,25 +81,27 @@
             this.lblRut.TabIndex = 2;
             this.lblRut.Text = "Rut:";
             // 
-            // pictureBox2
+            // picModificar
             // 
-            this.pictureBox2.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Pencil_32;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(502, 332);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.picModificar.BackgroundImage = global::BibliotecaFaber.Properties.Resources.Pencil_32;
+            this.picModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picModificar.Location = new System.Drawing.Point(502, 332);
+            this.picModificar.Name = "picModificar";
+            this.picModificar.Size = new System.Drawing.Size(50, 50);
+            this.picModificar.TabIndex = 5;
+            this.picModificar.TabStop = false;
+            this.picModificar.Click += new System.EventHandler(this.picModificar_Click);
             // 
-            // pictureBox1
+            // picEliminar
             // 
-            this.pictureBox1.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Close_32;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(571, 332);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.picEliminar.BackgroundImage = global::BibliotecaFaber.Properties.Resources.User_Close_32;
+            this.picEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picEliminar.Location = new System.Drawing.Point(571, 332);
+            this.picEliminar.Name = "picEliminar";
+            this.picEliminar.Size = new System.Drawing.Size(50, 50);
+            this.picEliminar.TabIndex = 4;
+            this.picEliminar.TabStop = false;
+            this.picEliminar.Click += new System.EventHandler(this.picEliminar_Click);
             // 
             // picAddUsr
             // 
@@ -165,22 +176,23 @@
             this.emailTextBox.Size = new System.Drawing.Size(173, 20);
             this.emailTextBox.TabIndex = 13;
             // 
-            // pictureBox3
+            // picVolver
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(568, 388);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 52);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.volverMenu);
+            this.picVolver.Image = ((System.Drawing.Image)(resources.GetObject("picVolver.Image")));
+            this.picVolver.Location = new System.Drawing.Point(636, 390);
+            this.picVolver.Name = "picVolver";
+            this.picVolver.Size = new System.Drawing.Size(50, 50);
+            this.picVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picVolver.TabIndex = 14;
+            this.picVolver.TabStop = false;
+            this.picVolver.Click += new System.EventHandler(this.volverMenu);
             // 
             // GestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 452);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.picVolver);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.telefonoTextBox);
             this.Controls.Add(this.edadTextBox);
@@ -189,12 +201,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picModificar);
+            this.Controls.Add(this.picEliminar);
             this.Controls.Add(this.picAddUsr);
             this.Controls.Add(this.lblRut);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tblClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -203,11 +215,11 @@
             this.Text = "GestionClientes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.gestionCliente_closed);
             this.Load += new System.EventHandler(this.GestionClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picModificar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddUsr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVolver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,12 +227,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tblClientes;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblRut;
         private System.Windows.Forms.PictureBox picAddUsr;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picEliminar;
+        private System.Windows.Forms.PictureBox picModificar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -229,6 +241,6 @@
         private System.Windows.Forms.TextBox edadTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picVolver;
     }
 }
