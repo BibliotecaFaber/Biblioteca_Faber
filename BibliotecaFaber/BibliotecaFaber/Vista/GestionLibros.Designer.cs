@@ -51,6 +51,7 @@
             // 
             // tblLibros
             // 
+            this.tblLibros.BackgroundColor = System.Drawing.SystemColors.Control;
             this.tblLibros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblLibros.Location = new System.Drawing.Point(12, 12);
