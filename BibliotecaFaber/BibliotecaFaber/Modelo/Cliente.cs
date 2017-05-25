@@ -51,12 +51,24 @@ namespace BibliotecaFaber.Modelo {
                 ", \"" + this.telefono + "\", \"" + this.email + "\");";
 
             new Conexion ().sendQuery (insert);
-             
-
-            
-
+        }
+        public void modificarCliente(string nuerut) {
+            string delete = "DELETE FROM CLIENTE WHERE RUN_CLIENTE='" + this.run + "';"; 
+            string insert = "INSERT INTO CLIENTE VALUES (\"" + nuerut + "\", \"" + this.nombre + "\",  " + this.edad +
+                ", \"" + this.telefono + "\", \"" + this.email + "\");";
+            new Conexion().sendQuery(delete);
+            new Conexion().sendQuery(insert);
         }
 
+        public void eliminarCliente() {
+            string delete = "DELETE FROM CLIENTE WHERE RUN_CLIENTE='" + this.run + "';";
+            new Conexion().sendQuery(delete);
+        }
+
+        public System.Data.DataTable cargarClientes() {
+            string select = "SELECT * FROM CLIENTE";
+            return new Conexion().getQuery(select);
+        }
 
     }
 }
