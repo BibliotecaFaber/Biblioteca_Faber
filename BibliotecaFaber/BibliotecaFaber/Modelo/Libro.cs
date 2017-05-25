@@ -28,6 +28,9 @@ namespace BibliotecaFaber.Modelo {
             this.En_prestamo = false;
         }
 
+        public Libro() {
+        }
+
         public int Id {
             get => id;
             set => id = value;
@@ -85,6 +88,11 @@ namespace BibliotecaFaber.Modelo {
         public System.Data.DataTable cargarLibros() {
             string select = "SELECT * FROM LIBRO";
             return new Conexion().getQuery(select);
+        }
+
+        public System.Data.DataTable buscaLibros(string str) {
+            string sql = "SELECT * FROM LIBRO WHERE NOMBRE LIKE \"%" + str + "%\";";
+            return new Conexion ().getQuery (sql);
         }
 
         //

@@ -12,6 +12,8 @@ namespace BibliotecaFaber.Controlador {
     class Controlador {
 
         public Conexion conexion = new Conexion ();
+        private DataTable dt;
+
         //InicioSesion inicio = new InicioSesion ();
 
         public void inicioPrograma() {
@@ -52,17 +54,29 @@ namespace BibliotecaFaber.Controlador {
 
         }
 
-        public void menuToBuscarLibros(MenuInicial mi) {
-
-            mi.Dispose ();
-            new BuscarLibros ().Show ();
-
+        public void menuToBuscarLibros(Form form, int i) {
+            if (i == 0) {
+                BuscarLibros bl = new BuscarLibros();
+                form.Dispose ();
+                bl.I = 0;
+                bl.Show ();
+            } else {
+                BuscarLibros bl = new BuscarLibros ();
+                form.Hide ();
+                bl.I = 1;
+                bl.Show ();
+            }
         }
 
         public void buscarLibrosToMenu(BuscarLibros bl) {
+            if (bl.I == 0) {
+                bl.Dispose ();
+                new MenuInicial ().Show ();
+            } else {
+                bl.Dispose ();
+                new InicioSesion ().Show ();
+            }
 
-            bl.Dispose ();
-            new MenuInicial ().Show ();
         }
 
         public void logout(MenuInicial mi) {
@@ -139,6 +153,9 @@ namespace BibliotecaFaber.Controlador {
             return l.cargarLibros();
         }
 
+        public DataTable buscarLibros(Libro l, string nombre) {
+            return l.buscaLibros (nombre);
+        }
 
     }
 }

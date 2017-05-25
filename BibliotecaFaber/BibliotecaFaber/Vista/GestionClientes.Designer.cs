@@ -212,7 +212,7 @@
             this.MinimizeBox = false;
             this.Name = "GestionClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GestionClientes";
+            this.Text = "Gestion de Clientes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.gestionCliente_closed);
             this.Load += new System.EventHandler(this.GestionClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).EndInit();

@@ -48,7 +48,7 @@
             this.MinimizeBox = false;
             this.Name = "PrestamoLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PrestamoLibro";
+            this.Text = "Prestamo de Libros";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.prestamoLibro_CLOSED);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

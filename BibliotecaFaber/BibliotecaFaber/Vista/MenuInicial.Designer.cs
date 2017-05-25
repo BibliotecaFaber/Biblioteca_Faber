@@ -160,7 +160,7 @@
             this.MinimizeBox = false;
             this.Name = "MenuInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuInicial";
+            this.Text = "Menú Principal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuInicial_FormClosed);
             this.Load += new System.EventHandler(this.MenuInicial_Load);
             this.Click += new System.EventHandler(this.gestionLibros_Click);
