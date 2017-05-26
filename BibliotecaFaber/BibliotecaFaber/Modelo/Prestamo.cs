@@ -8,18 +8,16 @@ namespace BibliotecaFaber.Modelo {
     class Prestamo {
         private int ID_prestamo;
         private bool estado_prestamo;
-        private Cliente cliente;
-        private Libro libro;
-        private Libro libro2;
-        private Libro libro3;
+        private string runCliente;
+        private int idLibro;
+        private int idLibro2;
+        private int idLibro3;
 
-        public Prestamo(int iD_prestamo, bool estado_prestamo, Cliente cliente, Libro libro, Libro libro2, Libro libro3) {
-            ID_prestamo1 = iD_prestamo;
-            this.Estado_prestamo = estado_prestamo;
-            this.Cliente = cliente;
-            this.Libro = libro;
-            this.Libro2 = libro2;
-            this.Libro3 = libro3;
+        public Prestamo(string runCliente, int idLibro, int idLibro2, int idLibro3) {
+            this.RunCliente = runCliente;
+            this.IdLibro = idLibro;
+            this.IdLibro2 = idLibro2;
+            this.IdLibro3 = idLibro3;
         }
 
         public int ID_prestamo1 {
@@ -30,21 +28,21 @@ namespace BibliotecaFaber.Modelo {
             get => estado_prestamo;
             set => estado_prestamo = value;
         }
-        internal Cliente Cliente {
-            get => cliente;
-            set => cliente = value;
+        public string RunCliente {
+            get => runCliente;
+            set => runCliente = value;
         }
-        internal Libro Libro {
-            get => libro;
-            set => libro = value;
+        public int IdLibro {
+            get => idLibro;
+            set => idLibro = value;
         }
-        internal Libro Libro2 {
-            get => libro2;
-            set => libro2 = value;
+        public int IdLibro2 {
+            get => idLibro2;
+            set => idLibro2 = value;
         }
-        internal Libro Libro3 {
-            get => libro3;
-            set => libro3 = value;
+        public int IdLibro3 {
+            get => idLibro3;
+            set => idLibro3 = value;
         }
     }
 }

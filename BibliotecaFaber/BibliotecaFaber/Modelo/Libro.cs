@@ -90,6 +90,12 @@ namespace BibliotecaFaber.Modelo {
             return new Conexion().getQuery(select);
         }
 
+        public System.Data.DataTable cargarLibrosDisponibles() {
+            string sql = "SELECT * FROM LIBRO WHERE EN_PRESTAMO = 0;";
+            return new Conexion ().getQuery (sql);
+            
+        }
+
         public System.Data.DataTable buscaLibros(string str) {
             string sql = "SELECT * FROM LIBRO WHERE NOMBRE LIKE \"%" + str + "%\";";
             return new Conexion ().getQuery (sql);
