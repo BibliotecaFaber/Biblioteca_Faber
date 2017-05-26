@@ -253,15 +253,28 @@ namespace BibliotecaFaber.Vista {
                     DataTable libros = (DataTable) tablaLibrosParaPrestar.DataSource;
 
                     if (libros.Rows.Count != 0) {
+                        string updateLibros = "UPDATE LIBRO SET EN_PRESTAMO = 1 WHERE ID" +
+                            "_LIBRO = ";
                         string sql = "INSERT INTO PRESTAMO VALUES (null, 0,'" + c.Run + "', "
                             + libros.Rows[0][0];
+
+                        var updateLibros1 = updateLibros + libros.Rows [0] [0] + ";";
+                        con.libroPrestado (updateLibros1);
                         if (libros.Rows.Count == 3) {
                             for (int i = 1; i < libros.Rows.Count; i++) {
                                 sql += ", " + libros.Rows [i] [0];
+
+
+                                updateLibros1 =updateLibros + libros.Rows [i] [0] + ";";
+                                con.libroPrestado (updateLibros1);
+                                
                             }
                         } else if (libros.Rows.Count == 2) {
                             for (int i = 1; i < libros.Rows.Count; i++) {
                                 sql += ", " + libros.Rows [i] [0];
+
+                                updateLibros1 = updateLibros + libros.Rows [i] [0] + ";";
+                                con.libroPrestado (updateLibros1);
                             }
                             sql += ", null";
                         } else {
@@ -272,6 +285,11 @@ namespace BibliotecaFaber.Vista {
                         sql += ");";
 
                         con.crearPrestamo (sql);
+
+                        MessageBox.Show ("El prestamo se ha realizado con éxito.");
+
+                        updateTabla ();
+                        updateTablaLibrosAPrestar (new DataTable ());
 
                     } else {
                         MessageBox.Show ("Deben existir libros en la tabla Libros a Prestar.");

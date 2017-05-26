@@ -171,5 +171,8 @@ namespace BibliotecaFaber.Controlador {
             new Conexion ().sendQuery (sql);
         }
 
+        public void libroPrestado(string sql) {
+            new Conexion ().sendQuery (sql);
+        }
     }
 }
