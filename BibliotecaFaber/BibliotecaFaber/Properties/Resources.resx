@@ -142,6 +142,9 @@
   <data name="Volver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Volver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="book_devolver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_devolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Window-App-List-Close-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Window-App-List-Close-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,9 +159,6 @@
   </data>
   <data name="0_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +181,9 @@
   <data name="2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="error_tabla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error_tabla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +199,11 @@
   <data name="2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pencil-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pencil-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_confirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_confirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +241,8 @@
   <data name="2_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pencil-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencil-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User-Add-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-Add-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +256,7 @@
   <data name="1_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_confirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_confirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="book_devolver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_devolver1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

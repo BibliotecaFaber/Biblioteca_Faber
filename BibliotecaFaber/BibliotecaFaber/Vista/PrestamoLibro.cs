@@ -239,6 +239,7 @@ namespace BibliotecaFaber.Vista {
 
         private void buttonRealizarPrestamo_Click(object sender, EventArgs e) {
             string run = runTextBox.Text;
+            run = validaRUN (run);
             if (!String.IsNullOrWhiteSpace(run) && !String.IsNullOrEmpty(run)) {
                 DataTable dt = con.buscarCliente(run);
 

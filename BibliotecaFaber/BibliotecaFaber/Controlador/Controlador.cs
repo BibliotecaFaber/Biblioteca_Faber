@@ -93,6 +93,16 @@ namespace BibliotecaFaber.Controlador {
 
         }
 
+        public void menuToDevolverLibro(MenuInicial mi) {
+            mi.Dispose ();
+            new DevolverLibros ().Show ();
+        }
+
+        public void devolverLibroToMenu(DevolverLibros dl) {
+            dl.Dispose ();
+            new MenuInicial ().Show ();
+        }
+
         public void gestionClienteToMenu(GestionClientes gc) {
 
             gc.Dispose ();
@@ -174,5 +184,23 @@ namespace BibliotecaFaber.Controlador {
         public void libroPrestado(string sql) {
             new Conexion ().sendQuery (sql);
         }
+
+        public DataTable mostrarPrestamos(Prestamo p) {
+
+            return p.cargarPrestamos();
+        }
+
+        public DataTable buscarPrestamo(Prestamo p, string run) {
+            return p.buscarPrestamo (run);
+        }
+
+        public void updatePrestamo(Prestamo p, string sql) {
+            p.updatePrestamo (sql);
+        }
+
+        public void updateLibro(Libro l, string sql) {
+            l.updateLibro (sql);
+        }
+
     }
 }
