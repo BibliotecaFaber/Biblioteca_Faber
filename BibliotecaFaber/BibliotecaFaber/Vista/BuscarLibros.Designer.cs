@@ -28,8 +28,11 @@
             this.nombrelibroTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.botonVolver = new System.Windows.Forms.PictureBox();
+            this.imgEstante = new System.Windows.Forms.PictureBox();
+            this.lblUbicacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEstante)).BeginInit();
             this.SuspendLayout();
             // 
             // buscarButton
@@ -56,6 +59,8 @@
             this.tablaLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaLibros.Size = new System.Drawing.Size(541, 229);
             this.tablaLibros.TabIndex = 1;
+            this.tablaLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaLibros_CellContentClick);
+            this.tablaLibros.SelectionChanged += new System.EventHandler(this.tablaLibros_SelectionChanged);
             // 
             // nombrelibroTextBox
             // 
@@ -76,18 +81,39 @@
             // botonVolver
             // 
             this.botonVolver.Image = global::BibliotecaFaber.Properties.Resources.Volver;
-            this.botonVolver.Location = new System.Drawing.Point(257, 284);
+            this.botonVolver.Location = new System.Drawing.Point(260, 394);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(45, 48);
             this.botonVolver.TabIndex = 4;
             this.botonVolver.TabStop = false;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Clicked);
             // 
+            // imgEstante
+            // 
+            this.imgEstante.Location = new System.Drawing.Point(165, 293);
+            this.imgEstante.Name = "imgEstante";
+            this.imgEstante.Size = new System.Drawing.Size(257, 83);
+            this.imgEstante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgEstante.TabIndex = 5;
+            this.imgEstante.TabStop = false;
+            this.imgEstante.Click += new System.EventHandler(this.imgEstante_Click);
+            // 
+            // lblUbicacion
+            // 
+            this.lblUbicacion.AutoSize = true;
+            this.lblUbicacion.Location = new System.Drawing.Point(36, 293);
+            this.lblUbicacion.Name = "lblUbicacion";
+            this.lblUbicacion.Size = new System.Drawing.Size(123, 13);
+            this.lblUbicacion.TabIndex = 6;
+            this.lblUbicacion.Text = "Ubicación en el Estante:";
+            // 
             // BuscarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 334);
+            this.ClientSize = new System.Drawing.Size(569, 454);
+            this.Controls.Add(this.lblUbicacion);
+            this.Controls.Add(this.imgEstante);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nombrelibroTextBox);
@@ -103,6 +129,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaLibros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEstante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +142,8 @@
         private System.Windows.Forms.TextBox nombrelibroTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox botonVolver;
+        private System.Windows.Forms.PictureBox imgEstante;
+        private System.Windows.Forms.Label lblUbicacion;
     }
 }
 

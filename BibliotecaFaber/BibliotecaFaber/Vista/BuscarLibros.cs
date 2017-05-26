@@ -1,4 +1,5 @@
 ﻿using BibliotecaFaber.Modelo;
+using BibliotecaFaber.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,6 +95,31 @@ namespace BibliotecaFaber {
 
         private void botonVolver_Clicked(object sender, EventArgs e) {
             con.buscarLibrosToMenu (this);
+        }
+
+        private void tablaLibros_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void tablaLibros_SelectionChanged(object sender, EventArgs e) {
+            if (I == 0) {
+                lblUbicacion.Visible = true;
+                imgEstante.Visible = true;
+                if (tablaLibros.CurrentCell != null) {
+                    int row = tablaLibros.CurrentCell.RowIndex;
+                    ResourceManager rm = Resources.ResourceManager;
+                    Bitmap tabla = (Bitmap)rm.GetObject(tablaLibros.Rows[row].Cells[4].Value.ToString() + "_" + tablaLibros.Rows[row].Cells[5].Value.ToString());
+                    imgEstante.Image = tabla;
+                }
+            } else {
+                lblUbicacion.Visible = false;
+                imgEstante.Visible = false;
+            }
+            
+        }
+
+        private void imgEstante_Click(object sender, EventArgs e) {
+
         }
     }
 }
