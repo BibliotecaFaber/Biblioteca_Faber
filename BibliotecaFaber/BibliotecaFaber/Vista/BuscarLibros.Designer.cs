@@ -46,10 +46,14 @@
             // 
             this.tablaLibros.AllowUserToAddRows = false;
             this.tablaLibros.AllowUserToDeleteRows = false;
+            this.tablaLibros.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tablaLibros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaLibros.Location = new System.Drawing.Point(12, 49);
+            this.tablaLibros.MultiSelect = false;
             this.tablaLibros.Name = "tablaLibros";
             this.tablaLibros.ReadOnly = true;
+            this.tablaLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaLibros.Size = new System.Drawing.Size(541, 229);
             this.tablaLibros.TabIndex = 1;
             // 
