@@ -53,5 +53,9 @@ namespace BibliotecaFaber.Vista {
         private void prestamoLibros_click(object sender, EventArgs e) {
             con.menuToPrestamoLibros (this);
         }
+
+        private void buttonDevolverLibro_Click(object sender, EventArgs e) {
+            con.menuToDevolverLibro (this);
+        }
     }
 }

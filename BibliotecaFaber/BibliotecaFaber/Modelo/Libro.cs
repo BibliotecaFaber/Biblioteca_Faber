@@ -80,6 +80,8 @@ namespace BibliotecaFaber.Modelo {
             new Conexion().sendQuery(insert);
         }
 
+
+
         public void eliminarLibro() {
             string delete = "DELETE FROM LIBRO WHERE ID_LIBRO='" + this.id + "';";
             new Conexion().sendQuery(delete);
@@ -102,7 +104,9 @@ namespace BibliotecaFaber.Modelo {
         }
 
         //
-        
-        
+
+        public void updateLibro(string sql) {
+            new Conexion ().sendQuery (sql);
+        }
     }
 }
