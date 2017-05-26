@@ -24,6 +24,9 @@ namespace BibliotecaFaber.Modelo {
             this.Email = email;
         }
 
+        public Cliente() {
+        }
+
         public string Run {
             get => run;
             set => run = value;
@@ -70,5 +73,10 @@ namespace BibliotecaFaber.Modelo {
             return new Conexion().getQuery(select);
         }
 
+        public System.Data.DataTable buscarCliente(string s) {
+
+            string sql = "SELECT * FROM CLIENTE WHERE RUN_CLIENTE = '" + s + "';";
+            return new Conexion ().getQuery (sql);
+        }
     }
 }

@@ -163,7 +163,6 @@
             this.Text = "Menú Principal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuInicial_FormClosed);
             this.Load += new System.EventHandler(this.MenuInicial_Load);
-            this.Click += new System.EventHandler(this.gestionLibros_Click);
             ((System.ComponentModel.ISupportInitialize)(this.boton_gestionCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_prestamoLibros)).EndInit();

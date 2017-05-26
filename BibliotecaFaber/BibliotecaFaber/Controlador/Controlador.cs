@@ -125,6 +125,8 @@ namespace BibliotecaFaber.Controlador {
             c.eliminarCliente();
         }
 
+
+
         public void modificarCliente(Cliente c, string currut) {
             c.modificarCliente(currut);
         }
@@ -132,6 +134,10 @@ namespace BibliotecaFaber.Controlador {
 
         public DataTable obtenerClientes(Cliente c) {
             return c.cargarClientes();
+        }
+
+        public DataTable buscarCliente(string run) {
+            return new Cliente ().buscarCliente (run);
         }
 
         public void insertLibro(Libro l) {
@@ -148,6 +154,9 @@ namespace BibliotecaFaber.Controlador {
             l.modificarLibro(curid);
         }
 
+        public DataTable obtenerLibrosDisponibles(Libro l) {
+            return l.cargarLibrosDisponibles ();
+        }
 
         public DataTable obtenerLibros(Libro l) {
             return l.cargarLibros();
@@ -157,5 +166,13 @@ namespace BibliotecaFaber.Controlador {
             return l.buscaLibros (nombre);
         }
 
+
+        public void crearPrestamo(string sql) {
+            new Conexion ().sendQuery (sql);
+        }
+
+        public void libroPrestado(string sql) {
+            new Conexion ().sendQuery (sql);
+        }
     }
 }

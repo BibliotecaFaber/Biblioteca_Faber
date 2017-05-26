@@ -180,7 +180,9 @@
     <None Include="Resources\Pencil-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Volver.png" />
+    <None Include="Resources\Volver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Book-Close-32.png" />
@@ -277,6 +279,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error_tabla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_arrowup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_arrowdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_confirm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets')" />
