@@ -65,27 +65,30 @@ namespace BibliotecaFaber.Vista {
         private void tblLibros_SelectionChanged(object sender, EventArgs e) {
             if (tblLibros.CurrentCell != null) {
                 int row = tblLibros.CurrentCell.RowIndex;
-                txtCodigo.Text = tblLibros.Rows[row].Cells[0].Value.ToString();
-                txtNombre.Text = tblLibros.Rows[row].Cells[1].Value.ToString();
-                txtAutor.Text = tblLibros.Rows[row].Cells[2].Value.ToString();
-                txtEditorial.Text = tblLibros.Rows[row].Cells[3].Value.ToString();
-                int inf = int.Parse(tblLibros.Rows[row].Cells[4].Value.ToString());
-                inf++;
-                int colf = int.Parse(tblLibros.Rows[row].Cells[5].Value.ToString());
-                colf++;
-                txtUbicacion.Text = inf + "," + colf;
-                inf--;
-                colf--;
-                string Pos_Tabla = inf + "_" + colf;
-                ResourceManager rm = Resources.ResourceManager;
-                Bitmap tabla = (Bitmap)rm.GetObject(Pos_Tabla);
-                tablaEstante.Image = tabla;
-                if(tblLibros.Rows[row].Cells[6].Value.ToString() != "") {
-                    int pres = int.Parse(tblLibros.Rows[row].Cells[6].Value.ToString());
-                    chkPrestamo.Checked = (pres == 0 ? false : true);
+                if (tblLibros.Rows[row].Cells[0].Value != tblLibros.Rows[row].Cells[1].Value) {
+                    picEliminar.Enabled = true;
+                    txtCodigo.Text = tblLibros.Rows[row].Cells[0].Value.ToString();
+                    txtNombre.Text = tblLibros.Rows[row].Cells[1].Value.ToString();
+                    txtAutor.Text = tblLibros.Rows[row].Cells[2].Value.ToString();
+                    txtEditorial.Text = tblLibros.Rows[row].Cells[3].Value.ToString();
+                    int inf = int.Parse(tblLibros.Rows[row].Cells[4].Value.ToString());
+                    inf++;
+                    int colf = int.Parse(tblLibros.Rows[row].Cells[5].Value.ToString());
+                    colf++;
+                    txtUbicacion.Text = inf + "," + colf;
+                    inf--;
+                    colf--;
+                    string Pos_Tabla = inf + "_" + colf;
+                    ResourceManager rm = Resources.ResourceManager;
+                    Bitmap tabla = (Bitmap)rm.GetObject(Pos_Tabla);
+                    tablaEstante.Image = tabla;
+                    if (tblLibros.Rows[row].Cells[6].Value.ToString() != "") {
+                        int pres = int.Parse(tblLibros.Rows[row].Cells[6].Value.ToString());
+                        chkPrestamo.Checked = (pres == 0 ? false : true);
+                    }
+                } else {
+                    picEliminar.Enabled = false;
                 }
-                
-                //emailTextBox.Text = tblClientes.Rows[row].Cells[4].Value.ToString();
             }
         }
 
@@ -148,7 +151,22 @@ namespace BibliotecaFaber.Vista {
         }
 
         private void picEliminar_Click(object sender, EventArgs e) {
+            int row = tblLibros.CurrentCell.RowIndex;
 
+            string codigo = tblLibros.Rows[row].Cells[0].Value.ToString();
+            string nombre = tblLibros.Rows[row].Cells[1].Value.ToString();
+            string autor =  tblLibros.Rows[row].Cells[2].Value.ToString();
+            string editorial = tblLibros.Rows[row].Cells[3].Value.ToString();
+            int fila = int.Parse(tblLibros.Rows[row].Cells[4].Value.ToString());
+            int columna = int.Parse(tblLibros.Rows[row].Cells[5].Value.ToString());
+            con.eliminarLibro(new Libro(int.Parse(codigo),nombre,autor,editorial,fila,columna));
+
+            updateTabla();
+            txtAutor.Text = "";
+            txtCodigo.Text = "";
+            txtEditorial.Text = "";
+            txtNombre.Text = "";
+            txtUbicacion.Text = "";
         }
     }
 }
