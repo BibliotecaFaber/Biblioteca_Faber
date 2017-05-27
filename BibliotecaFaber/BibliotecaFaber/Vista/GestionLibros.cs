@@ -34,7 +34,6 @@ namespace BibliotecaFaber.Vista {
             tblLibros.Columns[5].Visible = false; //Columna
             //tblLibros.Columns[6].HeaderText = "En Prestamo";
             tblLibros.Columns[6].Visible = false;
-            //tblLibros.Columns[7].Visible = false; //Id Estante (DEP)
             //tblLibros.Columns[1].HeaderText = "";
             tblLibros.Rows[0].Selected = true;
         }

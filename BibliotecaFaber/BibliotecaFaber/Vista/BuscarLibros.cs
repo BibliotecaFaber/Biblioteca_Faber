@@ -45,11 +45,10 @@ namespace BibliotecaFaber {
                 tablaLibros.Columns[4].Visible = false;
                 tablaLibros.Columns[5].Visible = false;
                 tablaLibros.Columns[6].Visible = false;
-                tablaLibros.Columns[7].Visible = false;
                 int columnNumber = 6;
                 tablaLibros.Columns.Add("Prestamo", "Prestado");
                 for (int i = 0; i < tablaLibros.Rows.Count; i++) {
-                    if (tablaLibros[columnNumber, i].Value.ToString() == "0") { tablaLibros[8, i].Value = "No"; } else { tablaLibros[8, i].Value = "Si"; }
+                    if (tablaLibros[columnNumber, i].Value.ToString() == "0") { tablaLibros[7, i].Value = "No"; } else { tablaLibros[7, i].Value = "Si"; }
                 }
             } else {
                 tablaLibros.Columns[0].HeaderText = "Código del Libro";
@@ -59,11 +58,10 @@ namespace BibliotecaFaber {
                 tablaLibros.Columns[4].Visible = false;
                 tablaLibros.Columns[5].Visible = false;
                 tablaLibros.Columns[6].Visible = false;
-                tablaLibros.Columns[7].Visible = false;
                 int columnNumber = 6;
                 tablaLibros.Columns.Add("Prestamo", "Prestado");
                 for (int i = 0; i < tablaLibros.Rows.Count; i++) {
-                    if (tablaLibros[columnNumber, i].Value.ToString() == "0") { tablaLibros[8, i].Value = "No"; } else { tablaLibros[8, i].Value = "Si"; }
+                    if (tablaLibros[columnNumber, i].Value.ToString() == "0") { tablaLibros[7, i].Value = "No"; } else { tablaLibros[7, i].Value = "Si"; }
                 }
             }
             

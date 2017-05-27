@@ -35,7 +35,11 @@ namespace BibliotecaFaber.Controlador {
                     MessageBox.Show ("Usuario y contraseña correctos, bienvenido!");
                     inis.Hide ();
                     new MenuInicial ().Show ();
+                } else {
+                    MessageBox.Show("Contraseña Incorrecta");
                 }
+            } else {
+                MessageBox.Show("No Existe el Usuario");
             }
 
 

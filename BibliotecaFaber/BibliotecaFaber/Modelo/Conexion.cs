@@ -15,7 +15,7 @@ namespace BibliotecaFaber.Modelo {
         private SQLiteConnection Sqlite;
 
         public Conexion() {
-            Sqlite = new SQLiteConnection(@"Data Source=C:\db\biblio.db");
+            Sqlite = new SQLiteConnection(@"Data Source=|DataDirectory|\biblio.db");
         }
 
         
@@ -26,13 +26,13 @@ namespace BibliotecaFaber.Modelo {
 
             try {
                 SQLiteCommand cmd;
-                Sqlite.Open();  //Initiate connection to the db
+                Sqlite.Open(); 
                 cmd = Sqlite.CreateCommand();
-                cmd.CommandText = query;  //set the passed query
+                cmd.CommandText = query; 
                 ad = new SQLiteDataAdapter(cmd);
-                ad.Fill(dt); //fill the datasource
+                ad.Fill(dt); 
             } catch (SQLiteException ex) {
-                //Add your exception code here.
+              
                 MessageBox.Show ("Exception: " + ex);
             }
             Sqlite.Close();
@@ -45,12 +45,11 @@ namespace BibliotecaFaber.Modelo {
 
             try {
                 SQLiteCommand cmd;
-                Sqlite.Open();  //Initiate connection to the db
+                Sqlite.Open();
                 cmd = Sqlite.CreateCommand();
-                cmd.CommandText = query;  //set the passed query
+                cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
             } catch (SQLiteException ex) {
-                //Add your exception code here.
                 if (query.Contains ("INSERT") && query.Contains ("CLIENTE")) {
                     MessageBox.Show ("El cliente ya se encuentra en la base de datos.");
                 } else if (query.Contains ("INSERT") && query.Contains ("LIBRO")) {
